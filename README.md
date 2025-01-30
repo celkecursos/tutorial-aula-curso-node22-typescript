@@ -1,3 +1,5 @@
+Código-fonte das aulas sobre [Node.js - TypeScript]().<br>
+
 ## Requisitos
 
 * Node.js 22 ou superior - Conferir a versão: node -v
@@ -79,3 +81,39 @@ Comando SQL para criar a base de dados.
 CREATE DATABASE celke CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
+## Como enviar o projeto para o GitHub.
+
+Inicializar um novo repositorio GIT.
+```
+git init
+```
+
+Adicionar todos os arquivos modificados na área de preparação.
+´´´
+git add .
+´´´
+
+Commit registra as alterações feitas nos arquivos que foram adicionados na área de preparação.
+´´´
+git commit -m "Base do projeto"
+´´´
+
+Verificar em qual branch está.
+´´´
+git branch
+´´´
+
+Renomear a branch atual no GIT para main.
+´´´
+git branch -M main
+´´´
+
+Adicionar um repositório remoto ao repositório local.
+´´´
+git remote add origin https://github.com/celkecursos/tutorial-aula-curso-node22-typescript.git
+´´´
+
+Enviar os commits locais para um repositório remoto.
+´´´
+git push -u origin main
+´´´
