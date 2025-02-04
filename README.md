@@ -1,4 +1,4 @@
-Código-fonte das aulas sobre [Node.js - TypeScript]().<br>
+Código-fonte das aulas sobre [Node.js - TypeScript](https://www.youtube.com/watch?v=sDvr_KVJzwE&list=PLmY5AEiqDWwAY8AyeNy1zv-n4LEdGz1iE).<br>
 
 ## Requisitos
 
@@ -8,6 +8,13 @@ Código-fonte das aulas sobre [Node.js - TypeScript]().<br>
 
 ## Como rodar o projeto baixado
 
+Alterar as credenciais do banco de dados no arquivo "src/data-source.ts".
+
+Criar a base de dados "celke".
+```
+CREATE DATABASE celke CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
 Instalar todas as dependencias indicada pelo package.json.
 ```
 npm install
@@ -16,6 +23,11 @@ npm install
 Compilar o arquivo TypeScript.
 ```
 npx tsc
+```
+
+Executar as migrations para criar as tabelas no banco de dados.
+```
+npx typeorm migration:run -d dist/data-source.js
 ```
 
 Executar o arquivo gerado com Node.js.
@@ -79,6 +91,19 @@ npm install mysql2 --save
 Comando SQL para criar a base de dados.
 ```
 CREATE DATABASE celke CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+Criar a migrations que será usada para criar a tabela no banco de dados.
+```
+npx typeorm migration:create src/migration/<nome-da-migration>
+```
+```
+npx typeorm migration:create src/migration/CreateUsersTable
+```
+
+Executar as migrations para criar as tabelas no banco de dados.
+```
+npx typeorm migration:run -d dist/data-source.js
 ```
 
 ## Como enviar o projeto para o GitHub.
