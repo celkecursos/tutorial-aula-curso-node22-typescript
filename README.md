@@ -35,7 +35,7 @@ Executar o arquivo gerado com Node.js.
 node dist/index.js
 ```
 
-## Sequencia para criar o projeto
+## Sequência para criar o projeto.
 
 Criar o arquivo package.
 ```
