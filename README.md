@@ -1,4 +1,4 @@
-Código-fonte das aulas sobre [Node.js - TypeScript](https://www.youtube.com/watch?v=sDvr_KVJzwE&list=PLmY5AEiqDWwAY8AyeNy1zv-n4LEdGz1iE).<br>
+Código-fonte das aulas como criar API com [Node.js - TypeScript](https://www.youtube.com/watch?v=sDvr_KVJzwE&list=PLmY5AEiqDWwAY8AyeNy1zv-n4LEdGz1iE).<br>
 
 ## Requisitos
 
@@ -34,6 +34,9 @@ Executar o arquivo gerado com Node.js.
 ```
 node dist/index.js
 ```
+
+Importar a collection do diretório "postman" para o Postman no VS Code.<br>
+A API é executada no endereço "http://localhost:8080".<br>
 
 ## Sequência para criar o projeto.
 
