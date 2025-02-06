@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f13286fb-4541-4bad-939d-d3a548f54d9c",
+		"_postman_id": "b9be1d4e-ee59-49a3-9cf9-5e9b0858899d",
 		"name": "tutorial-aula-curso-node22-typescript",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "41483318"
@@ -13,13 +13,32 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Cesar\",\r\n    \"email\": \"cesar@celke.com.br\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Gabrielly\",\r\n    \"email\": \"gabrielly@celke.com.br\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/users",
 					"protocol": "http",

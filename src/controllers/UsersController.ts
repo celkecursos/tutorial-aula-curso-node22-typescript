@@ -7,6 +7,29 @@ import { User } from "../entity/User";
 // Criar a aplicação Express
 const router = express.Router();
 
+// Criar a rota para listar os usuários
+// Endereço para acessar a api através da aplicação externa com o verbo GET: http://localhost:8080/users
+router.get("/users", async (req: Request, res: Response) => {
+    try{
+        // Criar uma instância do repositório de User
+        const userRepository = AppDataSource.getRepository(User);
+
+        // Recupera todos os usuários do banco de dados
+        const users = await userRepository.find();
+
+        // Retorna os usuários como resposta
+        res.status(200).json(users);
+        return;
+
+    }catch(error){
+        // Retornar erro em caso de falha
+        res.status(500).json({
+            message: "Erro ao listar os usuários!"
+        });
+        return;
+    }
+});
+
 // Criar a rota para cadastrar usuário
 // Endereço para acessar a api através da aplicação externa com o verbo POST: http://localhost:8080/users
 // A aplicação externa deve indicar que está enviado os dados em formato de objeto: Content-Type: application/json
