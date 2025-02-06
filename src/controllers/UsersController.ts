@@ -8,7 +8,7 @@ import { User } from "../entity/User";
 const router = express.Router();
 
 // Criar a rota para listar os usuários
-// Endereço para acessar a api através da aplicação externa com o verbo GET: http://localhost:8080/users
+// Endereço para acessar a API através da aplicação externa com o verbo GET: http://localhost:8080/users
 router.get("/users", async (req: Request, res: Response) => {
     try{
         // Criar uma instância do repositório de User
