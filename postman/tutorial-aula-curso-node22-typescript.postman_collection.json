@@ -1,25 +1,16 @@
 {
 	"info": {
-		"_postman_id": "b9be1d4e-ee59-49a3-9cf9-5e9b0858899d",
+		"_postman_id": "b5fe5bbc-40fa-441e-8655-b49703c43a99",
 		"name": "tutorial-aula-curso-node22-typescript",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "41483318"
 	},
 	"item": [
 		{
-			"name": "Create",
+			"name": "List",
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Gabrielly\",\r\n    \"email\": \"gabrielly@celke.com.br\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "http://localhost:8080/users",
 					"protocol": "http",
@@ -35,10 +26,39 @@
 			"response": []
 		},
 		{
-			"name": "List",
+			"name": "View",
 			"request": {
 				"method": "GET",
 				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kelly\",\r\n    \"email\": \"kelly@celke.com.br\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8080/users",
 					"protocol": "http",

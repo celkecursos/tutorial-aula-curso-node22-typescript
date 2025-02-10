@@ -30,6 +30,41 @@ router.get("/users", async (req: Request, res: Response) => {
     }
 });
 
+// Rota para visualizar um usuário específico
+// Endereço para acessar a api através da aplicação externa com o verbo GET: http://localhost:8080/users/:id
+router.get("/users/:id", async (req: Request, res: Response) => {
+    try{
+
+        // Obter o ID do usuário a partir dos parâmetros da requisição
+        const { id } = req.params;
+
+        // Obter o repositório da entidade User
+        const userRepository = AppDataSource.getRepository(User);
+
+        // Buscar o usuário no banco de dados pelo ID
+        const user = await userRepository.findOneBy({ id: parseInt(id)});
+
+        // Verificar se o usuário foi encontrado
+        if(!user){
+            res.status(404).json({
+                message: "Usuário não encontrada!"
+            });
+            return;
+        }        
+
+        // Retornar o usuário encontrado
+        res.status(200).json({ user });
+        return;
+
+    }catch(error){
+        // Retornar erro em caso de falha
+        res.status(500).json({
+            message: "Erro ao visualizar o usuário!"
+        });
+        return;
+    }
+});
+
 // Criar a rota para cadastrar usuário
 // Endereço para acessar a api através da aplicação externa com o verbo POST: http://localhost:8080/users
 // A aplicação externa deve indicar que está enviado os dados em formato de objeto: Content-Type: application/json
