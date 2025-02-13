@@ -186,5 +186,46 @@ router.put("/users/:id", async (req: Request, res: Response) => {
     }
 });
 
+// Criar a rota para apagar um usuário
+// Endereço para acessar a API através da aplicação externa com o verbo DELETE: http://localhost:8080/users/:id
+router.delete("/users/:id", async (req: Request, res: Response) => {
+
+    try{
+
+        // Obter o ID do usuário a partir dos parâmetros da requisição
+        const { id }= req.params;
+
+        // Obter o repositório da entidade User
+        const userRepository = AppDataSource.getRepository(User);
+
+        // Buscar o usuário no banco de dados pelo ID
+        const user = await userRepository.findOneBy( {id: parseInt(id)});
+
+        // Verificar se o usuário foi encontrado
+        if(!user){
+            res.status(404).json({
+                message: "Usuário não encontrado!"
+            });
+            return;
+        }
+
+        // Remover o usuário do banco de dados
+        await userRepository.remove(user);
+
+        // Retornar resposta de sucesso
+        res.status(200).json({
+            message: "Usuário apagado com sucesso!",
+        });   
+
+    } catch (error) {
+
+        // Retornar erro em caso de falha
+        res.status(500).json({
+            message: "Erro ao apagar usuário!"
+        });
+    }
+
+});
+
 // Exportar a instrução que está dentro da constante router 
 export default router;
