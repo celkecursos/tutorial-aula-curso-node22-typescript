@@ -109,6 +109,12 @@ Executar as migrations para criar as tabelas no banco de dados.
 npx typeorm migration:run -d dist/data-source.js
 ```
 
+Permitir requisição externa.
+```
+npm install cors
+npm install --save-dev @types/cors
+```
+
 ## Como enviar o projeto para o GitHub.
 
 Inicializar um novo repositorio GIT.
