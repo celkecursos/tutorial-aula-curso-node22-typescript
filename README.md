@@ -86,6 +86,11 @@ Biblioteca utilizada no TypeScript para adicionar metadados (informações adici
 npm install reflect-metadata --save
 ```
 
+Iniciar o MySQL instalado no sistema operacional com PowerShell.
+```
+net start mysql80
+```
+
 Instalar o drive do banco de dados MySQL.
 ```
 npm install mysql2 --save
