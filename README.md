@@ -20,19 +20,14 @@ Instalar todas as dependencias indicada pelo package.json.
 npm install
 ```
 
-Compilar o arquivo TypeScript.
+Compilar o arquivo TypeScript. Executar o arquivo gerado.
 ```
-npx tsc
+npm run start:watch
 ```
 
 Executar as migrations para criar as tabelas no banco de dados.
 ```
 npx typeorm migration:run -d dist/data-source.js
-```
-
-Executar o arquivo gerado com Node.js.
-```
-node dist/index.js
 ```
 
 Importar a collection do diretório "postman" para o Postman no VS Code.<br>
@@ -118,6 +113,16 @@ Permitir requisição externa.
 ```
 npm install cors
 npm install --save-dev @types/cors
+```
+
+Instalar a dependência para rodar processo simultaneamente.
+```
+npm install --save-dev concurrently
+```
+
+Compilar o arquivo TypeScript. Executar o arquivo gerado.
+```
+npm run start:watch
 ```
 
 ## Como enviar o projeto para o GitHub.
