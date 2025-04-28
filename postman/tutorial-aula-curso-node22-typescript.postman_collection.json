@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b5fe5bbc-40fa-441e-8655-b49703c43a99",
+		"_postman_id": "1cbd3e70-31fa-49c5-a61d-3f11ec989deb",
 		"name": "tutorial-aula-curso-node22-typescript",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "41483318"
@@ -117,6 +117,25 @@
 					"path": [
 						"users",
 						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users-report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users-report"
 					]
 				}
 			},

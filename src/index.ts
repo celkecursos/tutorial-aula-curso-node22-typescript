@@ -15,9 +15,11 @@ app.use(cors());
 
 // Incluir as CONTROLLERS
 import UsersController from "./controllers/UsersController";
+import ReportsController from "./controllers/ReportsController";
 
 // Criar as rotas
-app.use('/', UsersController)
+app.use('/', UsersController);
+app.use('/', ReportsController);
 
 // Criar a rota GET principal
 app.get("/", (req: Request, res: Response) => {

@@ -125,6 +125,11 @@ Compilar o arquivo TypeScript. Executar o arquivo gerado.
 npm run start:watch
 ```
 
+Instalar o módulo para manipular a data.
+```
+npm install date-fns
+```
+
 ## Como enviar o projeto para o GitHub.
 
 Inicializar um novo repositorio GIT.
