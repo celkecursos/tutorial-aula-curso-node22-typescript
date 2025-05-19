@@ -23,7 +23,17 @@ app.use('/', ReportsController);
 
 // Criar a rota GET principal
 app.get("/", (req: Request, res: Response) => {
-    res.send("Bem-vindo Celke!");
+    // res.send("Bem-vindo à Celke!");
+
+    // Retornar a mensagem de sucesso
+    res.status(200).json({
+        message: "Mensagem de retorno da API. Conexão realizada com sucesso entre o APP e a API!"
+    });
+
+    // Retornar a mensagem de erro
+    // res.status(500).json({
+    //     message: "Erro retornado da API!"
+    // });
 });
 
 // Iniciar o servidor na porta 8080
